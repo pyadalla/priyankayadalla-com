@@ -83,7 +83,7 @@
         <p class="lead" style="text-align:center; margin: 0 auto 30px;">Fans, questions,
           collabs, bookings — it all lands in my inbox.</p>
 
-        <form class="contact" action="https://formspree.io/f/meaqvlrk" method="POST">
+        <form class="contact" id="contactForm" action="https://formspree.io/f/meaqvlrk" method="POST">
           <label>
             <span>Your name</span>
             <input type="text" name="name" placeholder="What should I call you?" required />
@@ -108,9 +108,45 @@
           </label>
           <button type="submit" class="btn" style="margin-top: 8px;">Send it 🤍</button>
         </form>
+
+        <div class="form-thanks" id="formThanks" hidden>
+          <span class="form-thanks__icon">💌</span>
+          <h2>Thank you!</h2>
+          <p class="lead" style="margin: 0 auto;">Your message is on its way to my inbox —
+            I'll get back to you soon. 🤍</p>
+        </div>
       </div>
     </div>
   </section>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const thanks = document.getElementById('formThanks');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          form.hidden = true;
+          thanks.hidden = false;
+          thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          btn.textContent = 'Hmm, try again';
+          btn.disabled = false;
+        }
+      } catch (err) {
+        btn.textContent = 'Hmm, try again';
+        btn.disabled = false;
+      }
+    });
+  </script>
 
   <footer class="footer">
     <span class="whisper">still becoming — and that's the whole point.</span>

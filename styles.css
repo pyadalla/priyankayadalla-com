@@ -254,6 +254,9 @@ section { padding: clamp(56px, 9vw, 110px) 0; }
 .contact textarea { resize: vertical; }
 .contact .btn { align-self: center; border: none; cursor: pointer; }
 
+.form-thanks { text-align: center; padding: 20px 0; }
+.form-thanks__icon { font-size: 2.6rem; display: block; margin-bottom: 10px; }
+
 /* ---------- footer ---------- */
 .footer {
   text-align: center;

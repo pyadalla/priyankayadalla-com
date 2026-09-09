@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Priyanka Yadalla</title>
-  <meta name="description" content="My story, in my own voice." />
+  <meta name="description" content="Get to know me, my story." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -22,13 +22,145 @@
     </ul>
   </nav>
 
-  <section class="soon">
+  <!-- ===== intro ===== -->
+  <header class="about-intro">
+    <div class="wrap about-intro__grid">
+      <div class="about-intro__photo">
+        <!-- add your new About photo as images/about-me.jpg -->
+        <img src="images/about-me.jpg" alt="Priyanka Yadalla"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="photo-placeholder">
+          <span>📷</span>
+          <p>insert a new photo here</p>
+        </div>
+      </div>
+      <div class="about-intro__text">
+        <p class="eyebrow">about me</p>
+        <h1>Hi, I'm Priyanka</h1>
+        <p class="lead placeholder">[ One or two sentences that introduce you go here.
+          Who you are, in a warm first hello. ]</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== my story ===== -->
+  <section class="wrap story">
+    <p class="eyebrow">my story</p>
+    <h2>How I got here.</h2>
+    <p class="placeholder">[ First paragraph of your story. Where you're from, what your
+      world looks like, what you're studying or chasing. Write it like you're talking to a
+      friend. ]</p>
+    <p class="placeholder">[ Second paragraph. The turns, the lessons, the "still figuring
+      it out" honesty. What led you to build this space. ]</p>
+  </section>
+
+  <!-- ===== photo carousel ===== -->
+  <section class="carousel-section">
     <div class="wrap">
-      <span class="tag">coming soon</span>
-      <h1>About Me</h1>
-      <p class="lead" style="margin: 0 auto;">My story, in my own voice. A college girl
-        figuring it out, one honest step at a time. This room is framed and waiting for me
-        to write it.</p>
+      <p class="eyebrow">in photos</p>
+      <h2>A few moments.</h2>
+
+      <div class="carousel" id="carousel">
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <!-- Add your friends & personality photos as images/photo-1.jpg ... photo-7.jpg.
+                 Each falls back to a placeholder until the file exists.
+                 Edit the caption text between the <p class="carousel__caption"> tags. -->
+            <div class="carousel__slide">
+              <img src="images/photo-1.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add photo 1</p></div>
+              <p class="carousel__caption">[ a little caption, e.g. me &amp; my girls ]</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-2.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add photo 2</p></div>
+              <p class="carousel__caption">[ your caption here ]</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-3.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add photo 3</p></div>
+              <p class="carousel__caption">[ your caption here ]</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-4.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add photo 4</p></div>
+              <p class="carousel__caption">[ your caption here ]</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-5.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add photo 5</p></div>
+              <p class="carousel__caption">[ your caption here ]</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-6.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add photo 6</p></div>
+              <p class="carousel__caption">[ your caption here ]</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-7.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add photo 7</p></div>
+              <p class="carousel__caption">[ your caption here ]</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel__btn carousel__btn--prev" aria-label="Previous photo">&#8249;</button>
+        <button class="carousel__btn carousel__btn--next" aria-label="Next photo">&#8250;</button>
+
+        <div class="carousel__dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== a few things about me ===== -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">a few things about me</p>
+      <h2>The little details.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>What I love</h3>
+          <p class="placeholder">[ Something you're passionate about. ]</p>
+        </div>
+        <div class="card">
+          <h3>What I'm about</h3>
+          <p class="placeholder">[ A value or belief you hold. ]</p>
+        </div>
+        <div class="card">
+          <h3>A fun fact</h3>
+          <p class="placeholder">[ Something surprising or playful. ]</p>
+        </div>
+        <div class="card">
+          <h3>What I'm working toward</h3>
+          <p class="placeholder">[ A goal or dream you're chasing. ]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== right now ===== -->
+  <section class="about-now">
+    <div class="wrap">
+      <p class="whisper">right now, I'm...</p>
+      <p class="lead placeholder" style="margin: 0 auto;">[ A short "current chapter" note.
+        What you're focused on this season, what's new, what you're excited about. Easy to
+        update whenever life changes. ]</p>
+    </div>
+  </section>
+
+  <!-- ===== cta ===== -->
+  <section class="wrap about-cta">
+    <h2>Want to keep up with me?</h2>
+    <div class="about-cta__btns">
+      <a href="journal.html" class="btn">Read the Journal</a>
+      <a href="connect.html" class="btn btn--ghost">Say Hi</a>
     </div>
   </section>
 
@@ -37,5 +169,37 @@
     &copy; <span id="year"></span> Priyanka Yadalla
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
+
+  <script>
+    (function () {
+      const root = document.getElementById('carousel');
+      if (!root) return;
+      const track = root.querySelector('.carousel__track');
+      const slides = Array.from(root.querySelectorAll('.carousel__slide'));
+      const dotsWrap = root.querySelector('.carousel__dots');
+      let i = 0;
+
+      // build dots
+      slides.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel__dot';
+        dot.setAttribute('aria-label', 'Go to photo ' + (idx + 1));
+        dot.addEventListener('click', () => go(idx));
+        dotsWrap.appendChild(dot);
+      });
+      const dots = Array.from(dotsWrap.children);
+
+      function go(n) {
+        i = (n + slides.length) % slides.length;
+        track.style.transform = 'translateX(' + (-i * 100) + '%)';
+        dots.forEach((d, idx) => d.classList.toggle('is-active', idx === i));
+      }
+
+      root.querySelector('.carousel__btn--prev').addEventListener('click', () => go(i - 1));
+      root.querySelector('.carousel__btn--next').addEventListener('click', () => go(i + 1));
+
+      go(0);
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Here — Priyanka Yadalla</title>
+  <meta name="description" content="New here? This is me, and where to begin." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <span class="nav__brand">priyanka yadalla</span>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="start-here.html" class="is-active">Start Here</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="connect.html">Connect</a></li>
+    </ul>
+  </nav>
+
+  <section class="soon">
+    <div class="wrap">
+      <span class="tag">coming soon</span>
+      <h1>Start Here</h1>
+      <p class="lead" style="margin: 0 auto;">A warm welcome mat — who I am, what lives on
+        this site, and the best places to begin. This room is framed and waiting to be filled.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="whisper">still becoming — and that's the whole point.</span>
+    &copy; <span id="year"></span> Priyanka Yadalla
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>

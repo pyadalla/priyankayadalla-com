@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priyanka Yadalla</title>
+  <meta name="description" content="A college girl figuring it out — sharing the journey so you know you can too. Still becoming, and that's the whole point." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <span class="nav__brand">priyanka yadalla</span>
+    <ul class="nav__links">
+      <li><a href="index.html" class="is-active">Home</a></li>
+      <li><a href="start-here.html">Start Here</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="connect.html">Connect</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">welcome in</p>
+      <h1 class="hero__name">priyanka</h1>
+      <p class="whisper">still becoming — and that's the whole point.</p>
+      <a href="start-here.html" class="btn">Start Here</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">a little preview</p>
+      <h2>Come see what I'm building.</h2>
+      <p class="lead">I'm a college girl figuring it out — sharing the real, unfinished
+        journey so you know you're allowed to be figuring it out too.</p>
+
+      <div class="grid">
+        <a class="card" href="start-here.html">
+          <h3>Start Here</h3>
+          <p>New here? This is me, and where to begin.</p>
+          <span class="go">enter &rarr;</span>
+        </a>
+        <a class="card" href="about.html">
+          <h3>About</h3>
+          <p>My story, in my own voice.</p>
+          <span class="go">read &rarr;</span>
+        </a>
+        <a class="card" href="journal.html">
+          <h3>Journal</h3>
+          <p>Writing, videos & monthly favorites — all in one place.</p>
+          <span class="go">explore &rarr;</span>
+        </a>
+        <a class="card" href="connect.html">
+          <h3>Connect</h3>
+          <p>Come say hi & follow along.</p>
+          <span class="go">reach me &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="whisper">there's more in you than they told you.</span>
+    &copy; <span id="year"></span> Priyanka Yadalla
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>

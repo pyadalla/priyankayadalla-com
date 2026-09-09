@@ -1,0 +1,192 @@
+/* priyankayadalla.com — shared styles
+   Vibe: soft-feminine + clean/professional.
+   Palette: cream, blush, soft rose, deep plum text. */
+
+:root {
+  --cream: #FBF7F2;
+  --blush: #F6E7E4;
+  --rose: #C98B8B;
+  --rose-deep: #A96A6A;
+  --plum: #3A2C33;
+  --plum-soft: #6A5560;
+  --line: #ECDCD7;
+  --shadow: 0 18px 50px rgba(58, 44, 51, 0.08);
+  --radius: 22px;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--plum);
+  font-family: "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 0.4em;
+  letter-spacing: 0.2px;
+}
+
+h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+
+a { color: var(--rose-deep); text-decoration: none; }
+a:hover { color: var(--plum); }
+
+/* ---------- nav ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px clamp(20px, 5vw, 56px);
+  background: rgba(251, 247, 242, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav__brand {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  color: var(--plum);
+  text-transform: lowercase;
+}
+.nav__links {
+  display: flex;
+  gap: clamp(14px, 3vw, 34px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.nav__links a {
+  color: var(--plum-soft);
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.nav__links a:hover,
+.nav__links a.is-active { color: var(--rose-deep); }
+
+/* ---------- layout ---------- */
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px); }
+
+section { padding: clamp(56px, 9vw, 110px) 0; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.72rem;
+  color: var(--rose);
+  margin-bottom: 18px;
+}
+
+.lead { font-size: 1.15rem; color: var(--plum-soft); max-width: 60ch; }
+
+/* ---------- hero ---------- */
+.hero {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(1200px 500px at 50% -10%, var(--blush), transparent 70%),
+    var(--cream);
+}
+.hero h1 { margin-bottom: 0.2em; }
+.hero .whisper {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  color: var(--rose-deep);
+}
+.hero__name { text-transform: lowercase; letter-spacing: 2px; }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  background: var(--rose);
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+.btn:hover { background: var(--rose-deep); color: #fff; transform: translateY(-2px); }
+
+/* ---------- preview cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+  margin-top: 40px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 34px 30px;
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease;
+}
+.card:hover { transform: translateY(-4px); }
+.card h3 { font-size: 1.7rem; margin-bottom: 6px; }
+.card p { color: var(--plum-soft); font-size: 0.98rem; margin: 0 0 14px; }
+.card .go { font-size: 0.78rem; letter-spacing: 1.5px; text-transform: uppercase; }
+
+/* ---------- soft placeholder (scaffold rooms) ---------- */
+.soon {
+  text-align: center;
+  background:
+    radial-gradient(900px 400px at 50% 0%, var(--blush), transparent 70%),
+    var(--cream);
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.soon .tag {
+  display: inline-block;
+  margin: 0 auto 22px;
+  padding: 7px 20px;
+  border: 1px solid var(--rose);
+  border-radius: 999px;
+  color: var(--rose-deep);
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ---------- footer ---------- */
+.footer {
+  text-align: center;
+  padding: 50px 20px 60px;
+  border-top: 1px solid var(--line);
+  color: var(--plum-soft);
+  font-size: 0.85rem;
+}
+.footer .whisper {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--rose-deep);
+  display: block;
+  margin-bottom: 10px;
+}
+.footer a { margin: 0 8px; }

@@ -137,6 +137,7 @@ section { padding: clamp(56px, 9vw, 110px) 0; }
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center 22%;
   border-radius: 26px;
   box-shadow: var(--shadow);
 }

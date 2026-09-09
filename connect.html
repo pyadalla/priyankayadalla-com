@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connect — Priyanka Yadalla</title>
-  <meta name="description" content="Come say hi & follow along." />
+  <meta name="description" content="Come say hi & follow along — plus a way to reach me for collabs & bookings." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -22,12 +22,82 @@
     </ul>
   </nav>
 
-  <section class="soon">
+  <header class="connect-hero">
     <div class="wrap">
-      <span class="tag">coming soon</span>
+      <p class="eyebrow">come say hi</p>
       <h1>Let's Connect</h1>
-      <p class="lead" style="margin: 0 auto;">Come say hi and follow along — my socials and
-        a way to reach me will live here. For friends, followers, and brand hellos alike.</p>
+      <p class="lead" style="margin: 0 auto;">Whether you want to follow along, say hello, or
+        talk collabs &amp; bookings — I'd love to hear from you. Don't be shy. 🤍</p>
+    </div>
+  </header>
+
+  <!-- ===== social buttons ===== -->
+  <section style="padding-top: 0;">
+    <div class="wrap">
+      <p class="eyebrow" style="text-align:center;">find me here</p>
+      <div class="socials">
+        <!-- TODO: swap the href="#" values for Priyanka's real handles/links -->
+        <a class="social" href="https://instagram.com/priyanka._.yadalla" target="_blank" rel="noopener">
+          <span class="social__icon">📸</span>
+          <span class="social__label">Instagram</span>
+          <span class="social__handle">@priyanka._.yadalla</span>
+        </a>
+        <a class="social" href="https://tiktok.com/@holdupisthatprii" target="_blank" rel="noopener">
+          <span class="social__icon">🎵</span>
+          <span class="social__label">TikTok</span>
+          <span class="social__handle">@holdupisthatprii</span>
+        </a>
+        <a class="social" href="https://tiktok.com/@prispamm2.0" target="_blank" rel="noopener">
+          <span class="social__icon">🎵</span>
+          <span class="social__label">TikTok</span>
+          <span class="social__handle">@prispamm2.0</span>
+        </a>
+        <a class="social" href="https://youtube.com/@its-prislife" target="_blank" rel="noopener">
+          <span class="social__icon">▶️</span>
+          <span class="social__label">YouTube</span>
+          <span class="social__handle">@its-prislife</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== contact form ===== -->
+  <section style="padding-top: 0;">
+    <div class="wrap">
+      <div class="form-card">
+        <p class="eyebrow" style="text-align:center;">send me a message</p>
+        <h2 style="text-align:center;">Say hello 💌</h2>
+        <p class="lead" style="text-align:center; margin: 0 auto 30px;">Fans, questions,
+          collabs, bookings — it all lands in my inbox.</p>
+
+        <!-- TODO: replace action="#" with your Formspree endpoint to make this deliver
+             (free at formspree.io — sign up, create a form, paste the URL here). -->
+        <form class="contact" action="#" method="POST">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" placeholder="What should I call you?" required />
+          </label>
+          <label>
+            <span>Your email</span>
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+          <label>
+            <span>What's up?</span>
+            <select name="topic">
+              <option>Just saying hi</option>
+              <option>A question for you</option>
+              <option>Collab / brand partnership</option>
+              <option>Booking / modeling inquiry</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>
+            <span>Your message</span>
+            <textarea name="message" rows="5" placeholder="Tell me anything…" required></textarea>
+          </label>
+          <button type="submit" class="btn" style="margin-top: 8px;">Send it 🤍</button>
+        </form>
+      </div>
     </div>
   </section>
 

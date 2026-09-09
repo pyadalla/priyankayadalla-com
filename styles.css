@@ -529,6 +529,91 @@ section { padding: clamp(56px, 9vw, 110px) 0; }
   .about-intro__photo { max-width: 320px; margin: 0 auto; }
 }
 
+/* ---------- journal page ---------- */
+.jr-hero {
+  text-align: center;
+  background:
+    radial-gradient(900px 450px at 50% 0%, var(--blush), transparent 70%),
+    var(--cream);
+  padding: clamp(56px, 9vw, 100px) 0 clamp(30px, 5vw, 50px);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.filter {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--plum-soft);
+  border-radius: 999px;
+  padding: 9px 22px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filter:hover { border-color: var(--rose); color: var(--rose-deep); }
+.filter.is-active { background: var(--rose); border-color: var(--rose); color: #fff; }
+
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 26px;
+}
+.entry {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease;
+}
+.entry:hover { transform: translateY(-4px); }
+.entry__media { position: relative; }
+.entry__ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  aspect-ratio: 16 / 10;
+  background: radial-gradient(400px 200px at 50% 30%, #fff, var(--blush));
+  color: var(--rose-deep);
+}
+.entry__ph span { font-size: 1.9rem; }
+.entry__ph p {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.72rem;
+}
+.entry__media--video .entry__ph { aspect-ratio: 16 / 9; background: var(--blush); }
+
+.entry__body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px; }
+.entry__meta { display: flex; align-items: center; gap: 12px; }
+.entry__tag {
+  background: var(--blush);
+  color: var(--rose-deep);
+  border-radius: 999px;
+  padding: 4px 13px;
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.entry__date { color: var(--plum-soft); font-size: 0.82rem; }
+.entry__body h3 { font-size: 1.55rem; margin: 0; }
+.entry__body p { color: var(--plum-soft); font-size: 0.95rem; margin: 0; }
+.entry__body .go { margin-top: 4px; font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; }
+
+.feed__empty { text-align: center; color: var(--plum-soft); padding: 40px 0; }
+
 /* ---------- footer ---------- */
 .footer {
   text-align: center;

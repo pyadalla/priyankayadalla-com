@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Journal | Priyanka Yadalla</title>
-  <meta name="description" content="Writing, videos & monthly favorites, all in one feed." />
+  <meta name="description" content="Life updates and current obsessions. Writing, videos, and everything I'm thinking." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -22,13 +22,84 @@
     </ul>
   </nav>
 
-  <section class="soon">
+  <!-- ===== header ===== -->
+  <header class="jr-hero">
     <div class="wrap">
-      <span class="tag">coming soon</span>
-      <h1>The Journal</h1>
-      <p class="lead" style="margin: 0 auto;">My living feed. Writing on dating, college
-        & life, my YouTube and TikTok videos, and monthly favorites, all in one place.
-        Filter by what you need. First entries coming soon.</p>
+      <p class="eyebrow">the journal</p>
+      <h1>Life updates and current obsessions.</h1>
+      <p class="lead" style="margin: 0 auto;">Writing, videos, and everything I'm thinking.
+        Pick a topic, or scroll it all.</p>
+    </div>
+  </header>
+
+  <!-- ===== feed ===== -->
+  <section class="wrap" style="padding-top: 40px;">
+    <div class="feed" id="feed">
+
+      <!-- WRITTEN POST (Life) -->
+      <article class="entry" data-tags="life">
+        <div class="entry__media"><div class="entry__ph"><span>📷</span></div></div>
+        <div class="entry__body">
+          <div class="entry__meta"><span class="entry__tag">Life</span><span class="entry__date">[ date ]</span></div>
+          <h3 class="placeholder">e.g. My morning routine that finally stuck</h3>
+          <p class="placeholder">e.g. The little habits that quietly changed how my days feel.</p>
+          <span class="go">read more &rarr;</span>
+        </div>
+      </article>
+
+      <!-- WRITTEN POST (College) -->
+      <article class="entry" data-tags="college">
+        <div class="entry__media"><div class="entry__ph"><span>📷</span></div></div>
+        <div class="entry__body">
+          <div class="entry__meta"><span class="entry__tag">College</span><span class="entry__date">[ date ]</span></div>
+          <h3 class="placeholder">e.g. How I actually survive midterms</h3>
+          <p class="placeholder">e.g. My real study routine, snacks and breakdowns included.</p>
+          <span class="go">read more &rarr;</span>
+        </div>
+      </article>
+
+      <!-- WRITTEN POST (Dating) -->
+      <article class="entry" data-tags="dating">
+        <div class="entry__media"><div class="entry__ph"><span>📷</span></div></div>
+        <div class="entry__body">
+          <div class="entry__meta"><span class="entry__tag">Dating</span><span class="entry__date">[ date ]</span></div>
+          <h3 class="placeholder">e.g. What I wish I knew before dating in college</h3>
+          <p class="placeholder">e.g. The lessons I learned the hard (but worth it) way.</p>
+          <span class="go">read more &rarr;</span>
+        </div>
+      </article>
+
+      <!-- YOUTUBE VIDEO (Watch) -->
+      <article class="entry" data-tags="watch">
+        <!-- To embed: replace this placeholder with a YouTube <iframe> (Share > Embed). -->
+        <div class="entry__media entry__media--video"><div class="entry__ph"><span>&#9654;</span><p>add YouTube video</p></div></div>
+        <div class="entry__body">
+          <div class="entry__meta"><span class="entry__tag">Watch</span><span class="entry__date">[ date ]</span></div>
+          <h3 class="placeholder">e.g. Day in my life at college (YouTube Short)</h3>
+        </div>
+      </article>
+
+      <!-- TIKTOK VIDEO (Watch) -->
+      <article class="entry" data-tags="watch">
+        <!-- To embed: replace this placeholder with a TikTok embed. -->
+        <div class="entry__media entry__media--video"><div class="entry__ph"><span>&#9654;</span><p>add TikTok video</p></div></div>
+        <div class="entry__body">
+          <div class="entry__meta"><span class="entry__tag">Watch</span><span class="entry__date">[ date ]</span></div>
+          <h3 class="placeholder">e.g. Get ready with me for class</h3>
+        </div>
+      </article>
+
+      <!-- WRITTEN POST (Life / favorites-style) -->
+      <article class="entry" data-tags="life">
+        <div class="entry__media"><div class="entry__ph"><span>📷</span></div></div>
+        <div class="entry__body">
+          <div class="entry__meta"><span class="entry__tag">Life</span><span class="entry__date">[ date ]</span></div>
+          <h3 class="placeholder">e.g. September favorites</h3>
+          <p class="placeholder">e.g. The products, songs, and little things I loved this month.</p>
+          <span class="go">read more &rarr;</span>
+        </div>
+      </article>
+
     </div>
   </section>
 

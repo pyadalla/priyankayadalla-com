@@ -113,7 +113,11 @@ section { padding: clamp(56px, 9vw, 110px) 0; }
   font-size: clamp(1.3rem, 3vw, 1.9rem);
   color: var(--rose-deep);
 }
-.hero__name { text-transform: lowercase; letter-spacing: 2px; }
+.hero__name {
+  text-transform: none;
+  letter-spacing: 1px;
+  font-size: clamp(3.4rem, 8.5vw, 6rem);
+}
 
 /* ---------- home hero ---------- */
 .home-hero {
@@ -167,6 +171,31 @@ section { padding: clamp(56px, 9vw, 110px) 0; }
   text-align: center;
   background: var(--blush);
 }
+
+/* ---------- latest strip ---------- */
+.latest__card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(28px, 4vw, 44px);
+  margin-top: 26px;
+  max-width: 620px;
+}
+.latest__tag {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: var(--blush);
+  color: var(--rose-deep);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.latest__card h3 { font-size: 1.9rem; margin-bottom: 8px; }
+.latest__card p { color: var(--plum-soft); margin: 0 0 22px; }
+.latest__card .btn { margin-top: 0; }
 .home-welcome .whisper {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-style: italic;

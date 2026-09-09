@@ -22,22 +22,50 @@
     </ul>
   </nav>
 
-  <header class="hero">
-    <div class="wrap">
-      <p class="eyebrow">welcome in</p>
-      <h1 class="hero__name">priyanka</h1>
-      <p class="whisper">still becoming — and that's the whole point.</p>
-      <a href="start-here.html" class="btn">Start Here</a>
+  <!-- ===== hero ===== -->
+  <header class="home-hero">
+    <div class="wrap home-hero__grid">
+      <div class="home-hero__text">
+        <p class="eyebrow">welcome in</p>
+        <h1 class="hero__name">priyanka</h1>
+        <p class="whisper">still becoming — and that's the whole point.</p>
+        <p class="lead">A college girl figuring it out — sharing the real, unfinished
+          journey so you know you're allowed to be figuring it out too.</p>
+        <div class="home-hero__cta">
+          <a href="start-here.html" class="btn">Start Here</a>
+          <a href="connect.html" class="btn btn--ghost">Say Hi</a>
+        </div>
+      </div>
+
+      <div class="home-hero__photo">
+        <!-- To add your photo: save it in the images/ folder (e.g. images/priyanka.jpg)
+             then set src below to "images/priyanka.jpg". Until then, a soft placeholder shows. -->
+        <img src="images/priyanka.jpg" alt="Priyanka Yadalla"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="photo-placeholder">
+          <span>📷</span>
+          <p>your photo here</p>
+        </div>
+      </div>
     </div>
   </header>
 
+  <!-- ===== welcome line ===== -->
+  <section class="home-welcome">
+    <div class="wrap">
+      <p class="whisper">you're allowed to be all of it.</p>
+      <p class="lead" style="margin: 0 auto;">Modeling, creating, studying, growing — I don't
+        fit into one neat little box, and I'm learning that's exactly the point. This is my
+        corner of the internet to share it all, and to remind you: there's more in you than
+        they told you. 🤍</p>
+    </div>
+  </section>
+
+  <!-- ===== what you'll find ===== -->
   <section>
     <div class="wrap">
       <p class="eyebrow">a little preview</p>
-      <h2>Come see what I'm building.</h2>
-      <p class="lead">I'm a college girl figuring it out — sharing the real, unfinished
-        journey so you know you're allowed to be figuring it out too.</p>
-
+      <h2>What you'll find here.</h2>
       <div class="grid">
         <a class="card" href="start-here.html">
           <h3>Start Here</h3>

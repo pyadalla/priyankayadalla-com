@@ -383,8 +383,7 @@ section { padding: clamp(56px, 9vw, 110px) 0; }
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 20%;
-  transform: scale(1.12);
+  object-position: 60% center;
 }
 
 .story { max-width: 760px; }

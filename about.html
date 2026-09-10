@@ -63,50 +63,68 @@
       <div class="carousel" id="carousel">
         <div class="carousel__viewport">
           <div class="carousel__track">
-            <!-- Add your friends & personality photos as images/photo-1.jpg ... photo-7.jpg.
+            <!-- Add your photos as images/photo-1.jpg ... photo-10.jpg.
                  Each falls back to a placeholder until the file exists.
                  Edit the caption text between the <p class="carousel__caption"> tags. -->
             <div class="carousel__slide">
               <img src="images/photo-1.jpg" alt="Priyanka"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
               <div class="photo-placeholder"><span>📷</span><p>add photo 1</p></div>
-              <p class="carousel__caption">[ a little caption, e.g. me &amp; my girls ]</p>
+              <p class="carousel__caption">me and my pham &lt;3</p>
             </div>
             <div class="carousel__slide">
               <img src="images/photo-2.jpg" alt="Priyanka"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-              <div class="photo-placeholder"><span>📷</span><p>add photo 2</p></div>
-              <p class="carousel__caption">[ your caption here ]</p>
+              <div class="photo-placeholder"><span>📷</span><p>add: candid laugh</p></div>
+              <p class="carousel__caption">[ caught mid-laugh ]</p>
             </div>
             <div class="carousel__slide">
               <img src="images/photo-3.jpg" alt="Priyanka"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-              <div class="photo-placeholder"><span>📷</span><p>add photo 3</p></div>
-              <p class="carousel__caption">[ your caption here ]</p>
+              <div class="photo-placeholder"><span>📷</span><p>add: glam night</p></div>
+              <p class="carousel__caption">fit check</p>
             </div>
             <div class="carousel__slide">
               <img src="images/photo-4.jpg" alt="Priyanka"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
               <div class="photo-placeholder"><span>📷</span><p>add photo 4</p></div>
-              <p class="carousel__caption">[ your caption here ]</p>
+              <p class="carousel__caption">my girls for life</p>
             </div>
             <div class="carousel__slide">
               <img src="images/photo-5.jpg" alt="Priyanka"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-              <div class="photo-placeholder"><span>📷</span><p>add photo 5</p></div>
-              <p class="carousel__caption">[ your caption here ]</p>
+              <div class="photo-placeholder"><span>📷</span><p>add: family</p></div>
+              <p class="carousel__caption">where it all started</p>
             </div>
             <div class="carousel__slide">
               <img src="images/photo-6.jpg" alt="Priyanka"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-              <div class="photo-placeholder"><span>📷</span><p>add photo 6</p></div>
-              <p class="carousel__caption">[ your caption here ]</p>
+              <div class="photo-placeholder"><span>📷</span><p>add: travel</p></div>
+              <p class="carousel__caption">take me back</p>
             </div>
             <div class="carousel__slide">
               <img src="images/photo-7.jpg" alt="Priyanka"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-              <div class="photo-placeholder"><span>📷</span><p>add photo 7</p></div>
-              <p class="carousel__caption">[ your caption here ]</p>
+              <div class="photo-placeholder"><span>📷</span><p>add: my happy place</p></div>
+              <p class="carousel__caption">[ my happy place ]</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-8.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add: cozy day</p></div>
+              <p class="carousel__caption">sushiholic!!</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-9.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add: solo shot</p></div>
+              <p class="carousel__caption">main character energy</p>
+            </div>
+            <div class="carousel__slide">
+              <img src="images/photo-10.jpg" alt="Priyanka"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-placeholder"><span>📷</span><p>add: goofy one</p></div>
+              <p class="carousel__caption">my kind of peace</p>
             </div>
           </div>
         </div>
@@ -195,10 +213,22 @@
         dots.forEach((d, idx) => d.classList.toggle('is-active', idx === i));
       }
 
-      root.querySelector('.carousel__btn--prev').addEventListener('click', () => go(i - 1));
-      root.querySelector('.carousel__btn--next').addEventListener('click', () => go(i + 1));
+      // ----- auto-rotate -----
+      const DELAY = 10000; // advance every 10 seconds
+      let timer;
+      function startAuto() { timer = setInterval(() => go(i + 1), DELAY); }
+      function resetAuto() { clearInterval(timer); startAuto(); }
+
+      root.querySelector('.carousel__btn--prev').addEventListener('click', () => { go(i - 1); resetAuto(); });
+      root.querySelector('.carousel__btn--next').addEventListener('click', () => { go(i + 1); resetAuto(); });
+      dots.forEach((dot) => dot.addEventListener('click', resetAuto));
+
+      // pause while hovering, resume when the mouse leaves
+      root.addEventListener('mouseenter', () => clearInterval(timer));
+      root.addEventListener('mouseleave', startAuto);
 
       go(0);
+      startAuto();
     })();
   </script>
 </body>

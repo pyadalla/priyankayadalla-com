@@ -598,6 +598,7 @@ section { padding: clamp(56px, 9vw, 110px) 0; }
   font-size: 0.72rem;
 }
 .entry__media--video .entry__ph { aspect-ratio: 16 / 9; background: var(--blush); }
+.entry__media--video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
 
 .entry__body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px; }
 .entry__meta { display: flex; align-items: center; gap: 12px; }
